@@ -31,7 +31,7 @@ public class HelloController {
 	
 	@RequestMapping("hello")
 	public String hello(Model m) {
-		m.addAttribute("msg", "iam hot_fix...");
+		m.addAttribute("msg", "iam hot_fix...222");
 		return "hello";
 	}
 	
