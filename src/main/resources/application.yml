@@ -1,0 +1,35 @@
+spring: 
+# mvc映射
+  mvc: 
+    view: 
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+#  数据源
+  datasource:
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.9.230:3306/yinzhan
+    type: com.alibaba.druid.pool.DruidDataSource
+#   数据源其他配置
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+mybatis: 
+# 指定全局配置文件的路径
+  config-location: classpath:mybatis/Mapper-config.xml
+# 指定sql映射文件的路径  
+  mapper-locations: classpath:mybatis/mapper/*.xml
+logging: 
+  level: 
+    com.yinzhan.demo: DEBUG
+debug: true
+    
